@@ -1,0 +1,21 @@
+<settings>
+    <profiles>
+        <profile>
+            <id>default</id>
+            <properties>
+                <sonar.exclusions>
+                    src/main/java/io/sanlo/credit/risk/config/CsvConfig.java,
+                    src/main/java/io/sanlo/credit/risk/config/properties/CsvProperties.java,
+                    src/main/java/io/sanlo/credit/risk/enums/Order.java,
+                    src/main/java/io/sanlo/credit/risk/enums/RiskRating.java,
+                    src/main/java/io/sanlo/credit/risk/model/Company.java,
+                    src/main/java/io/sanlo/credit/risk/model/FinancialMetric.java,
+                    src/main/java/io/sanlo/credit/risk/model/FinancialReport.java
+                </sonar.exclusions>
+            </properties>
+        </profile>
+    </profiles>
+    <activeProfiles>
+        <activeProfile>default</activeProfile>
+    </activeProfiles>
+</settings>
