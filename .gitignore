@@ -31,4 +31,4 @@ build/
 
 ### VS Code ###
 .vscode/
-/src/main/java/io/sanlo/avro/model/
+/src/main/java/io/rratti/avro/model/
