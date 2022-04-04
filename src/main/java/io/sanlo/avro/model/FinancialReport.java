@@ -13,8 +13,8 @@ import org.apache.avro.message.SchemaStore;
 @SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
 public class FinancialReport extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -257398722988210294L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"FinancialReport\",\"namespace\":\"io.sanlo.avro.model\",\"fields\":[{\"name\":\"companyId\",\"type\":\"int\"},{\"name\":\"companyName\",\"type\":\"string\"},{\"name\":\"appName\",\"type\":\"string\"},{\"name\":\"riskScore\",\"type\":\"int\"},{\"name\":\"riskRating\",\"type\":\"string\"}]}");
+  private static final long serialVersionUID = -83422930235469094L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"FinancialReport\",\"namespace\":\"io.sanlo.avro.model\",\"fields\":[{\"name\":\"companyId\",\"type\":[\"null\",\"int\"],\"default\":null},{\"name\":\"companyName\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"appName\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"riskScore\",\"type\":\"int\"},{\"name\":\"riskRating\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"aggregatedRevenues\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"aggregatedMarketingSpent\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"date\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"paybackDate\",\"type\":[\"null\",\"string\"],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -51,11 +51,15 @@ public class FinancialReport extends org.apache.avro.specific.SpecificRecordBase
     return DECODER.decode(b);
   }
 
-  @Deprecated public int companyId;
+  @Deprecated public java.lang.Integer companyId;
   @Deprecated public java.lang.CharSequence companyName;
   @Deprecated public java.lang.CharSequence appName;
   @Deprecated public int riskScore;
   @Deprecated public java.lang.CharSequence riskRating;
+  @Deprecated public java.lang.Double aggregatedRevenues;
+  @Deprecated public java.lang.Double aggregatedMarketingSpent;
+  @Deprecated public java.lang.CharSequence date;
+  @Deprecated public java.lang.CharSequence paybackDate;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -71,13 +75,21 @@ public class FinancialReport extends org.apache.avro.specific.SpecificRecordBase
    * @param appName The new value for appName
    * @param riskScore The new value for riskScore
    * @param riskRating The new value for riskRating
+   * @param aggregatedRevenues The new value for aggregatedRevenues
+   * @param aggregatedMarketingSpent The new value for aggregatedMarketingSpent
+   * @param date The new value for date
+   * @param paybackDate The new value for paybackDate
    */
-  public FinancialReport(java.lang.Integer companyId, java.lang.CharSequence companyName, java.lang.CharSequence appName, java.lang.Integer riskScore, java.lang.CharSequence riskRating) {
+  public FinancialReport(java.lang.Integer companyId, java.lang.CharSequence companyName, java.lang.CharSequence appName, java.lang.Integer riskScore, java.lang.CharSequence riskRating, java.lang.Double aggregatedRevenues, java.lang.Double aggregatedMarketingSpent, java.lang.CharSequence date, java.lang.CharSequence paybackDate) {
     this.companyId = companyId;
     this.companyName = companyName;
     this.appName = appName;
     this.riskScore = riskScore;
     this.riskRating = riskRating;
+    this.aggregatedRevenues = aggregatedRevenues;
+    this.aggregatedMarketingSpent = aggregatedMarketingSpent;
+    this.date = date;
+    this.paybackDate = paybackDate;
   }
 
   public org.apache.avro.Schema getSchema() { return SCHEMA$; }
@@ -89,6 +101,10 @@ public class FinancialReport extends org.apache.avro.specific.SpecificRecordBase
     case 2: return appName;
     case 3: return riskScore;
     case 4: return riskRating;
+    case 5: return aggregatedRevenues;
+    case 6: return aggregatedMarketingSpent;
+    case 7: return date;
+    case 8: return paybackDate;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
@@ -102,6 +118,10 @@ public class FinancialReport extends org.apache.avro.specific.SpecificRecordBase
     case 2: appName = (java.lang.CharSequence)value$; break;
     case 3: riskScore = (java.lang.Integer)value$; break;
     case 4: riskRating = (java.lang.CharSequence)value$; break;
+    case 5: aggregatedRevenues = (java.lang.Double)value$; break;
+    case 6: aggregatedMarketingSpent = (java.lang.Double)value$; break;
+    case 7: date = (java.lang.CharSequence)value$; break;
+    case 8: paybackDate = (java.lang.CharSequence)value$; break;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
@@ -187,6 +207,70 @@ public class FinancialReport extends org.apache.avro.specific.SpecificRecordBase
   }
 
   /**
+   * Gets the value of the 'aggregatedRevenues' field.
+   * @return The value of the 'aggregatedRevenues' field.
+   */
+  public java.lang.Double getAggregatedRevenues() {
+    return aggregatedRevenues;
+  }
+
+  /**
+   * Sets the value of the 'aggregatedRevenues' field.
+   * @param value the value to set.
+   */
+  public void setAggregatedRevenues(java.lang.Double value) {
+    this.aggregatedRevenues = value;
+  }
+
+  /**
+   * Gets the value of the 'aggregatedMarketingSpent' field.
+   * @return The value of the 'aggregatedMarketingSpent' field.
+   */
+  public java.lang.Double getAggregatedMarketingSpent() {
+    return aggregatedMarketingSpent;
+  }
+
+  /**
+   * Sets the value of the 'aggregatedMarketingSpent' field.
+   * @param value the value to set.
+   */
+  public void setAggregatedMarketingSpent(java.lang.Double value) {
+    this.aggregatedMarketingSpent = value;
+  }
+
+  /**
+   * Gets the value of the 'date' field.
+   * @return The value of the 'date' field.
+   */
+  public java.lang.CharSequence getDate() {
+    return date;
+  }
+
+  /**
+   * Sets the value of the 'date' field.
+   * @param value the value to set.
+   */
+  public void setDate(java.lang.CharSequence value) {
+    this.date = value;
+  }
+
+  /**
+   * Gets the value of the 'paybackDate' field.
+   * @return The value of the 'paybackDate' field.
+   */
+  public java.lang.CharSequence getPaybackDate() {
+    return paybackDate;
+  }
+
+  /**
+   * Sets the value of the 'paybackDate' field.
+   * @param value the value to set.
+   */
+  public void setPaybackDate(java.lang.CharSequence value) {
+    this.paybackDate = value;
+  }
+
+  /**
    * Creates a new FinancialReport RecordBuilder.
    * @return A new FinancialReport RecordBuilder
    */
@@ -218,11 +302,15 @@ public class FinancialReport extends org.apache.avro.specific.SpecificRecordBase
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<FinancialReport>
     implements org.apache.avro.data.RecordBuilder<FinancialReport> {
 
-    private int companyId;
+    private java.lang.Integer companyId;
     private java.lang.CharSequence companyName;
     private java.lang.CharSequence appName;
     private int riskScore;
     private java.lang.CharSequence riskRating;
+    private java.lang.Double aggregatedRevenues;
+    private java.lang.Double aggregatedMarketingSpent;
+    private java.lang.CharSequence date;
+    private java.lang.CharSequence paybackDate;
 
     /** Creates a new Builder */
     private Builder() {
@@ -255,6 +343,22 @@ public class FinancialReport extends org.apache.avro.specific.SpecificRecordBase
         this.riskRating = data().deepCopy(fields()[4].schema(), other.riskRating);
         fieldSetFlags()[4] = true;
       }
+      if (isValidValue(fields()[5], other.aggregatedRevenues)) {
+        this.aggregatedRevenues = data().deepCopy(fields()[5].schema(), other.aggregatedRevenues);
+        fieldSetFlags()[5] = true;
+      }
+      if (isValidValue(fields()[6], other.aggregatedMarketingSpent)) {
+        this.aggregatedMarketingSpent = data().deepCopy(fields()[6].schema(), other.aggregatedMarketingSpent);
+        fieldSetFlags()[6] = true;
+      }
+      if (isValidValue(fields()[7], other.date)) {
+        this.date = data().deepCopy(fields()[7].schema(), other.date);
+        fieldSetFlags()[7] = true;
+      }
+      if (isValidValue(fields()[8], other.paybackDate)) {
+        this.paybackDate = data().deepCopy(fields()[8].schema(), other.paybackDate);
+        fieldSetFlags()[8] = true;
+      }
     }
 
     /**
@@ -283,6 +387,22 @@ public class FinancialReport extends org.apache.avro.specific.SpecificRecordBase
         this.riskRating = data().deepCopy(fields()[4].schema(), other.riskRating);
         fieldSetFlags()[4] = true;
       }
+      if (isValidValue(fields()[5], other.aggregatedRevenues)) {
+        this.aggregatedRevenues = data().deepCopy(fields()[5].schema(), other.aggregatedRevenues);
+        fieldSetFlags()[5] = true;
+      }
+      if (isValidValue(fields()[6], other.aggregatedMarketingSpent)) {
+        this.aggregatedMarketingSpent = data().deepCopy(fields()[6].schema(), other.aggregatedMarketingSpent);
+        fieldSetFlags()[6] = true;
+      }
+      if (isValidValue(fields()[7], other.date)) {
+        this.date = data().deepCopy(fields()[7].schema(), other.date);
+        fieldSetFlags()[7] = true;
+      }
+      if (isValidValue(fields()[8], other.paybackDate)) {
+        this.paybackDate = data().deepCopy(fields()[8].schema(), other.paybackDate);
+        fieldSetFlags()[8] = true;
+      }
     }
 
     /**
@@ -298,7 +418,7 @@ public class FinancialReport extends org.apache.avro.specific.SpecificRecordBase
       * @param value The value of 'companyId'.
       * @return This builder.
       */
-    public io.sanlo.avro.model.FinancialReport.Builder setCompanyId(int value) {
+    public io.sanlo.avro.model.FinancialReport.Builder setCompanyId(java.lang.Integer value) {
       validate(fields()[0], value);
       this.companyId = value;
       fieldSetFlags()[0] = true;
@@ -319,6 +439,7 @@ public class FinancialReport extends org.apache.avro.specific.SpecificRecordBase
       * @return This builder.
       */
     public io.sanlo.avro.model.FinancialReport.Builder clearCompanyId() {
+      companyId = null;
       fieldSetFlags()[0] = false;
       return this;
     }
@@ -478,6 +599,162 @@ public class FinancialReport extends org.apache.avro.specific.SpecificRecordBase
       return this;
     }
 
+    /**
+      * Gets the value of the 'aggregatedRevenues' field.
+      * @return The value.
+      */
+    public java.lang.Double getAggregatedRevenues() {
+      return aggregatedRevenues;
+    }
+
+    /**
+      * Sets the value of the 'aggregatedRevenues' field.
+      * @param value The value of 'aggregatedRevenues'.
+      * @return This builder.
+      */
+    public io.sanlo.avro.model.FinancialReport.Builder setAggregatedRevenues(java.lang.Double value) {
+      validate(fields()[5], value);
+      this.aggregatedRevenues = value;
+      fieldSetFlags()[5] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'aggregatedRevenues' field has been set.
+      * @return True if the 'aggregatedRevenues' field has been set, false otherwise.
+      */
+    public boolean hasAggregatedRevenues() {
+      return fieldSetFlags()[5];
+    }
+
+
+    /**
+      * Clears the value of the 'aggregatedRevenues' field.
+      * @return This builder.
+      */
+    public io.sanlo.avro.model.FinancialReport.Builder clearAggregatedRevenues() {
+      aggregatedRevenues = null;
+      fieldSetFlags()[5] = false;
+      return this;
+    }
+
+    /**
+      * Gets the value of the 'aggregatedMarketingSpent' field.
+      * @return The value.
+      */
+    public java.lang.Double getAggregatedMarketingSpent() {
+      return aggregatedMarketingSpent;
+    }
+
+    /**
+      * Sets the value of the 'aggregatedMarketingSpent' field.
+      * @param value The value of 'aggregatedMarketingSpent'.
+      * @return This builder.
+      */
+    public io.sanlo.avro.model.FinancialReport.Builder setAggregatedMarketingSpent(java.lang.Double value) {
+      validate(fields()[6], value);
+      this.aggregatedMarketingSpent = value;
+      fieldSetFlags()[6] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'aggregatedMarketingSpent' field has been set.
+      * @return True if the 'aggregatedMarketingSpent' field has been set, false otherwise.
+      */
+    public boolean hasAggregatedMarketingSpent() {
+      return fieldSetFlags()[6];
+    }
+
+
+    /**
+      * Clears the value of the 'aggregatedMarketingSpent' field.
+      * @return This builder.
+      */
+    public io.sanlo.avro.model.FinancialReport.Builder clearAggregatedMarketingSpent() {
+      aggregatedMarketingSpent = null;
+      fieldSetFlags()[6] = false;
+      return this;
+    }
+
+    /**
+      * Gets the value of the 'date' field.
+      * @return The value.
+      */
+    public java.lang.CharSequence getDate() {
+      return date;
+    }
+
+    /**
+      * Sets the value of the 'date' field.
+      * @param value The value of 'date'.
+      * @return This builder.
+      */
+    public io.sanlo.avro.model.FinancialReport.Builder setDate(java.lang.CharSequence value) {
+      validate(fields()[7], value);
+      this.date = value;
+      fieldSetFlags()[7] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'date' field has been set.
+      * @return True if the 'date' field has been set, false otherwise.
+      */
+    public boolean hasDate() {
+      return fieldSetFlags()[7];
+    }
+
+
+    /**
+      * Clears the value of the 'date' field.
+      * @return This builder.
+      */
+    public io.sanlo.avro.model.FinancialReport.Builder clearDate() {
+      date = null;
+      fieldSetFlags()[7] = false;
+      return this;
+    }
+
+    /**
+      * Gets the value of the 'paybackDate' field.
+      * @return The value.
+      */
+    public java.lang.CharSequence getPaybackDate() {
+      return paybackDate;
+    }
+
+    /**
+      * Sets the value of the 'paybackDate' field.
+      * @param value The value of 'paybackDate'.
+      * @return This builder.
+      */
+    public io.sanlo.avro.model.FinancialReport.Builder setPaybackDate(java.lang.CharSequence value) {
+      validate(fields()[8], value);
+      this.paybackDate = value;
+      fieldSetFlags()[8] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'paybackDate' field has been set.
+      * @return True if the 'paybackDate' field has been set, false otherwise.
+      */
+    public boolean hasPaybackDate() {
+      return fieldSetFlags()[8];
+    }
+
+
+    /**
+      * Clears the value of the 'paybackDate' field.
+      * @return This builder.
+      */
+    public io.sanlo.avro.model.FinancialReport.Builder clearPaybackDate() {
+      paybackDate = null;
+      fieldSetFlags()[8] = false;
+      return this;
+    }
+
     @Override
     @SuppressWarnings("unchecked")
     public FinancialReport build() {
@@ -488,6 +765,10 @@ public class FinancialReport extends org.apache.avro.specific.SpecificRecordBase
         record.appName = fieldSetFlags()[2] ? this.appName : (java.lang.CharSequence) defaultValue(fields()[2]);
         record.riskScore = fieldSetFlags()[3] ? this.riskScore : (java.lang.Integer) defaultValue(fields()[3]);
         record.riskRating = fieldSetFlags()[4] ? this.riskRating : (java.lang.CharSequence) defaultValue(fields()[4]);
+        record.aggregatedRevenues = fieldSetFlags()[5] ? this.aggregatedRevenues : (java.lang.Double) defaultValue(fields()[5]);
+        record.aggregatedMarketingSpent = fieldSetFlags()[6] ? this.aggregatedMarketingSpent : (java.lang.Double) defaultValue(fields()[6]);
+        record.date = fieldSetFlags()[7] ? this.date : (java.lang.CharSequence) defaultValue(fields()[7]);
+        record.paybackDate = fieldSetFlags()[8] ? this.paybackDate : (java.lang.CharSequence) defaultValue(fields()[8]);
         return record;
       } catch (java.lang.Exception e) {
         throw new org.apache.avro.AvroRuntimeException(e);

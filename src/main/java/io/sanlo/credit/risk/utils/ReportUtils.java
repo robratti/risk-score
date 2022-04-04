@@ -90,6 +90,20 @@ public class ReportUtils {
         return 10;
     }
 
+    public static Integer getLtcCacNormalizedLive(double ltcCacRatio) {
+        if (ltcCacRatio > 1.0) {
+            return 100;
+        } else if (ltcCacRatio > 0.84) {
+            return 80;
+        } else if (ltcCacRatio > 0.67) {
+            return 60;
+        } else if (ltcCacRatio > 0.5) {
+            return 30;
+        }
+
+        return 10;
+    }
+
     public static RiskRating getRiskRating(Integer riskScore) {
         if (riskScore>=85) {
             return UNDOUBTED;
