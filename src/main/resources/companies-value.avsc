@@ -1,0 +1,19 @@
+{
+  "type": "record",
+  "name": "Company",
+  "namespace": "io.rratti.avro.model",
+  "fields": [
+    {
+      "name": "id",
+      "type": "int"
+    },
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "country",
+      "type": "string"
+    }
+  ]
+}

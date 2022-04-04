@@ -1,0 +1,27 @@
+{
+  "type": "record",
+  "name": "FinancialMetric",
+  "namespace": "io.rratti.avro.model",
+  "fields": [
+    {
+      "name": "date",
+      "type": "string"
+    },
+    {
+      "name": "appName",
+      "type": "string"
+    },
+    {
+      "name": "companyId",
+      "type": "int"
+    },
+    {
+      "name": "revenues",
+      "type": "double"
+    },
+    {
+      "name": "marketingSpent",
+      "type": "double"
+    }
+  ]
+}
